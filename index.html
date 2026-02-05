@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARA MI AMOR DIVINO, KAREN. ❤️❤️❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond:ital@0;1&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-bebe: #D4F1F9;
+            --vino-tinto: #6b0000;
+        }
+
+        /* Bloqueo de scroll para mantener el centrado */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body, html { 
+            width: 100%; height: 100%; 
+            background: #000; overflow: hidden; 
+            font-family: 'EB Garamond', serif;
+        }
+
+        /* Estructura de Pantallas */
+        .screen { 
+            display: none; width: 100%; height: 100vh; 
+            position: absolute; top: 0; left: 0; 
+            justify-content: center; align-items: center; 
+            flex-direction: column; z-index: 10;
+        }
+        .active { display: flex !important; animation: fadeIn 1s forwards; }
+
+        /* PANTALLA 1 */
+        #screen1 { background: radial-gradient(circle, #0a1f30 0%, #000 100%); }
+        .alma-text { font-family: 'Dancing Script'; font-size: 2rem; color: var(--azul-bebe); margin-bottom: 10px; }
+        .main-title { font-family: 'Cinzel'; font-size: 2.2rem; color: white; margin-bottom: 40px; text-align: center; padding: 0 20px; }
+        .btn-lujo { 
+            background: transparent; border: 1px solid white; color: white; 
+            padding: 15px 40px; cursor: pointer; font-family: 'Cinzel'; font-size: 1.1rem;
+            transition: 0.4s;
+        }
+        .btn-lujo:hover { background: white; color: #000; box-shadow: 0 0 20px white; }
+
+        /* PANTALLA 2: EL PERGAMINO */
+        .wood-table { 
+            width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; 
+            background: #1a0f0a url('https://www.transparenttextures.com/patterns/dark-wood.png'); 
+        }
+        .parchment { 
+            background: #e3d2b4 url('https://www.transparenttextures.com/patterns/paper-fibers.png'); 
+            width: 92%; max-width: 550px; padding: 30px; 
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.8); 
+            position: relative; transform: rotate(-0.5deg);
+        }
+        .letter-header { font-family: 'Dancing Script'; font-size: 2.2rem; color: #5d4037; margin-bottom: 12px; }
+        
+        /* Ajuste de texto para que quepa todo el mensaje */
+        .parrafo { 
+            font-size: 1.05rem; font-style: italic; line-height: 1.35; 
+            margin-bottom: 10px; color: #3c2f2f; text-align: justify;
+        }
+        .highlight { color: var(--vino-tinto); font-weight: bold; }
+        
+        .firma-box { text-align: right; margin-top: 10px; }
+        .nombre-firma { font-family: 'Dancing Script'; font-size: 2.2rem; color: var(--vino-tinto); margin: 0; }
+        
+        .btn-milagro { 
+            background: var(--vino-tinto); color: white; border: none; 
+            padding: 12px; width: 100%; font-family: 'Cinzel'; cursor: pointer; margin-top: 15px; 
+        }
+
+        /* PANTALLA 3: GALERÍA */
+        #screen3 { background: radial-gradient(circle, #1a0000 0%, #000 100%); }
+        .gallery-header { font-family: 'Dancing Script'; font-size: 2.2rem; color: var(--azul-bebe); margin-bottom: 25px; text-align: center; }
+        .gallery-container { display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap; }
+        .polaroid { background: white; padding: 8px 8px 25px 8px; box-shadow: 0 15px 30px rgba(0,0,0,0.7); }
+        .polaroid img { width: 160px; height: 210px; object-fit: cover; }
+        .polaroid p { color: #333; font-family: 'Dancing Script'; font-size: 1.3rem; text-align: center; margin-top: 8px; }
+
+        /* EFECTOS */
+        .heart { position: absolute; bottom: -50px; animation: floatUp linear infinite; z-index: 5; }
+        @keyframes floatUp { 
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; } 
+            10% { opacity: 1; } 
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; } 
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <section id="screen1" class="screen active">
+        <p class="alma-text">Desde lo más profundo de mi alma...</p>
+        <h1 class="main-title">❤️¿Quieres ser mi San Valentín ?❤️</h1>
+        <button class="btn-lujo" onclick="changeScreen('screen1', 'screen2')">SÍ, ACEPTO</button>
+    </section>
+
+    <section id="screen2" class="screen">
+        <div class="wood-table">
+            <div class="parchment">
+                <h2 class="letter-header">Para mi hermosa Karen...</h2>
+                
+                <p class="parrafo">"Tu belleza no es el decorado inútil de un salón, es el <span class="highlight">incendio de una biblioteca</span>: caótico, brillante y eterno. Hay un erotismo profundo y oscuro en tu forma de pensar, en esa soberbia inteligencia que no se doblega ante nadie y que me observa con la seguridad de quien ya ha caminado por sus propios abismos."</p>
+                
+                <p class="parrafo">"Alabada seas por esa espiritualidad que abraza la luz y por esa presencia que parece escrita a pulso por la vida misma. Eres vibrante porque eres libre, y eres hermosa porque eres verdad."</p>
+                
+                <p class="parrafo">"Ante el milagro de tu existencia, no pretendo ser tu dueña, sino tu refugio. Desde hoy, bajo el juramento de la noche, seré tu <span class="highlight">cómplice eterno</span> y tu más devota voluntad, caminando a tu lado en este incendio que llamamos amor."</p>
+                
+                <div class="firma-box">
+                    <p style="font-style: italic; color: #3c2f2f; font-size: 0.9rem;">Con amor eterno,</p>
+                    <p class="nombre-firma">Alejandra 💋</p>
+                </div>
+                
+                <button class="btn-milagro" onclick="changeScreen('screen2', 'screen3'); startHearts();">RECONOCER EL MILAGRO</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="screen3" class="screen">
+        <div id="hearts-container"></div>
+        <h2 class="gallery-header">❤️❤️❤️FELIZ SAN VALENTÍN, MI AMOR DIVINO.❤️❤️❤️</h2>
+        <div class="gallery-container">
+            <div class="polaroid"><img src="Reina.jpeg"><p>💗REINA💗</p></div>
+            <div class="polaroid"><img src="Hermosa.jpeg"><p>💗DIVINA💗</p></div>
+            <div class="polaroid"><img src="Divina.jpeg"><p>💗HERMOSA💗</p></div>
+        </div>
+    </section>
+
+    <script>
+        function changeScreen(hide, show) {
+            document.getElementById(hide).classList.remove('active');
+            document.getElementById(show).classList.add('active');
+        }
+
+        function startHearts() {
+            const container = document.getElementById('hearts-container');
+            setInterval(() => {
+                const h = document.createElement('div');
+                h.classList.add('heart');
+                h.innerHTML = '❤️';
+                const isBlue = Math.random() > 0.5;
+                // Rojo sexy y azul bebé
+                h.style.color = isBlue ? "#D4F1F9" : "#6b0000";
+                h.style.left = Math.random() * 100 + "vw";
+                const dur = Math.random() * 3 + 2;
+                h.style.animationDuration = dur + "s";
+                h.style.fontSize = (Math.random() * 1.5 + 1) + "rem";
+                container.appendChild(h);
+                setTimeout(() => h.remove(), dur * 1000);
+            }, 200);
+        }
+    </script>
+</body>
+</html>
